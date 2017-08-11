@@ -1,0 +1,9 @@
+version: '2.1'
+services:
+  client:
+    image: alpine
+    logging:
+      driver: "journald"
+    dns:
+     - ${LISTEN_ADDR}
+    command: /usr/bin/env sh
